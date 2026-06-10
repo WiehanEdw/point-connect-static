@@ -36,13 +36,29 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 const lightbox = document.getElementById('lightbox');
 const lbImg = document.getElementById('lbImg');
 const lbClose = document.getElementById('lbClose');
-document.querySelectorAll('.gallery-item img').forEach(img => {
+document.querySelectorAll('.gallery-item:not(.view-more) img').forEach(img => {
   img.parentElement.addEventListener('click', () => {
     lbImg.src = img.src.replace('w=800', 'w=1600');
     lbImg.alt = img.alt;
     lightbox.classList.add('open');
   });
 });
+
+// Gallery expand / collapse
+const viewMoreBtn = document.getElementById('galleryViewMore');
+const galleryHidden = document.getElementById('galleryHidden');
+if (viewMoreBtn && galleryHidden) {
+  viewMoreBtn.addEventListener('click', () => {
+    const isOpen = galleryHidden.classList.toggle('open');
+    viewMoreBtn.querySelector('.view-more-text').innerHTML = isOpen
+      ? '<i class="fa-solid fa-chevron-up"></i> Show Less'
+      : '<i class="fa-solid fa-images"></i> View More Images';
+    if (isOpen) {
+      setTimeout(() => galleryHidden.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 350);
+    }
+  });
+}
+
 function closeLB(){ lightbox.classList.remove('open'); lbImg.src=''; }
 lbClose.addEventListener('click', closeLB);
 lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLB(); });
