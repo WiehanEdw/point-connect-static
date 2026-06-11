@@ -80,7 +80,7 @@ form.addEventListener('submit', async (e) => {
     const json = await res.json();
     if (json.success) {
       status.className = 'form-status success';
-      status.textContent = '✅ Thanks! Your request has been sent — we\'ll be in touch shortly.';
+      status.textContent = 'Thank you! We will be in touch shortly.';
       form.reset();
     } else {
       status.className = 'form-status error';
