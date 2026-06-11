@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "On Point Electrical" },
+      { name: "description", content: "Professional electrical services in Limpopo and Gauteng. Your Electrical Connection." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "On Point Electrical" },
+      { property: "og:description", content: "Professional electrical services in Limpopo and Gauteng. Your Electrical Connection." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "On Point Electrical" },
+      { name: "twitter:description", content: "Professional electrical services in Limpopo and Gauteng. Your Electrical Connection." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f5c5f0ef-99ad-4644-9e09-df29679aa43b/id-preview-77e7845d--e68bda3c-157d-4af8-8eac-c48c914019c3.lovable.app-1781165402405.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f5c5f0ef-99ad-4644-9e09-df29679aa43b/id-preview-77e7845d--e68bda3c-157d-4af8-8eac-c48c914019c3.lovable.app-1781165402405.png" },
     ],
     links: [
       {
